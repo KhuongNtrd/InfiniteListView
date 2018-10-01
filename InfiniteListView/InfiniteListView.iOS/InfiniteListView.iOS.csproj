@@ -92,6 +92,7 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Renderers\InfiniteListViewRenderer.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -152,9 +153,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\InfiniteListView\InfiniteListView.csproj">
-      <Project>{E1F85CB6-02E6-4539-BFCA-A0AACA8DDD90}</Project>
-      <Name>InfiniteListView</Name>
+    <ProjectReference Include="..\InfiniteListView\InfiniteListView.Core.csproj">
+      <Project>{55267378-55DB-4716-A94D-19747F18693B}</Project>
+      <Name>InfiniteListView.Core</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

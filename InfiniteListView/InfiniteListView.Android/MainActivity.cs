@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using InfiniteListView.Core;
 
 namespace InfiniteListView.Droid
 {
@@ -16,6 +17,7 @@ namespace InfiniteListView.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
+            Xamarin.Forms.Forms.SetFlags("FastRenderers_Experimental");
 
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);

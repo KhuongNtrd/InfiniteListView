@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfiniteListView.Android", "InfiniteListView\InfiniteListView.Android\InfiniteListView.Android.csproj", "{03E9D11A-D85D-42EF-B6D6-21C73B035E02}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfiniteListView.Droid", "InfiniteListView\InfiniteListView.Android\InfiniteListView.Droid.csproj", "{03E9D11A-D85D-42EF-B6D6-21C73B035E02}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfiniteListView.iOS", "InfiniteListView\InfiniteListView.iOS\InfiniteListView.iOS.csproj", "{66DDBC97-D4D0-4FB2-8B3E-5B82B1B36CBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfiniteListView", "InfiniteListView\InfiniteListView\InfiniteListView.csproj", "{55267378-55DB-4716-A94D-19747F18693B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfiniteListView.Core", "InfiniteListView\InfiniteListView\InfiniteListView.Core.csproj", "{55267378-55DB-4716-A94D-19747F18693B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

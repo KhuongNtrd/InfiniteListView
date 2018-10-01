@@ -1,14 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:InfiniteListView"
-             x:Class="InfiniteListView.MainPage">
+             xmlns:controls="clr-namespace:InfiniteListView.Core.Controls;assembly=InfiniteListView.Core"
+             x:Class="InfiniteListView.Core.MainPage"
+             x:Name="Root">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
-
+    <Grid RowSpacing="0"
+          VerticalOptions="FillAndExpand">
+        <controls:InfiniteListView IsLoadingInfinite="{Binding LoadingInfinite}"
+                                   IsLoadingInfiniteEnabled="True"
+                                   LoadingCommand="{Binding LoadingCommand}"
+                                   HasMoreItems="{Binding HasMoreItems}"
+                                   IsPullToRefreshEnabled="True"
+                                   IsRefreshing="{Binding IsRefreshing}"
+                                   RefreshCommand="{Binding RefreshCommand}"
+                                   Collection="{Binding Collection}"
+                                   HasUnevenRows="True"
+                                   SelectionMode="None">
+            <controls:InfiniteListView.LoadingItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ActivityIndicator HeightRequest="30"
+                                           IsRunning="True"
+                                           IsVisible="{Binding Source={x:Reference Root},Path=BindingContext.HasMoreItems}"
+                                           WidthRequest="30" />
+                    </ViewCell>
+                </DataTemplate>
+            </controls:InfiniteListView.LoadingItemTemplate>
+            <controls:InfiniteListView.ListItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Title}"
+                              Detail="{Binding Overview}" />
+                </DataTemplate>
+            </controls:InfiniteListView.ListItemTemplate>
+        </controls:InfiniteListView>
+        <Label Text="NO ITEMS FOUND"
+               IsVisible="{Binding IsEmpty}"
+               HorizontalOptions="Center"
+               Margin="20"
+               InputTransparent="True" />
+    </Grid>
 </ContentPage>
